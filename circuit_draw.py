@@ -10,7 +10,7 @@ Example showing how to draw a quantum circuit using Qiskit Terra.
 
 """
 
-from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, IBMQ
 
 
 def build_bell_circuit():
@@ -22,7 +22,6 @@ def build_bell_circuit():
     qc.cx(q[0], q[1])
     qc.measure(q, c)
     return qc
-
 
 # Create the circuit
 bell_circuit = build_bell_circuit()
